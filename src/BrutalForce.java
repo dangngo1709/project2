@@ -2,18 +2,16 @@
 public class BrutalForce {
 public int BrutalForce( int[] array) {
 		int totalSum = 0;
-		int currSum = 0;
+		
 	
 		if (array == null || array.length == 0) {
 			return totalSum;
 		}
 		for (int i = 0; i < array.length; i++) {
 
-			currSum = array[i];
+			int currSum = 0;
 			for (int j = i ; j < array.length; j++) {
 				currSum = currSum + array[j];
-				if (currSum < 0)
-					return 0;
 				if (currSum > totalSum) {
 					totalSum = currSum;
 					
